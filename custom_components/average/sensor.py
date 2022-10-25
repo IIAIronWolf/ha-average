@@ -58,6 +58,7 @@ from .const import (
     DEFAULT_NAME,
     DEFAULT_PRECISION,
     UPDATE_MIN_TIME,
+    CONF_INTERVAL,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -147,6 +148,7 @@ class AverageSensor(SensorEntity):
         self._precision = precision
         self._undef = undef
         self._temperature_mode = None
+        self._interval = interval
 
         self.sources = expand_entity_ids(hass, entity_ids)
         self.count_sources = len(self.sources)
