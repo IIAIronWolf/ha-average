@@ -35,7 +35,7 @@ CONF_END: Final = "end"
 CONF_DURATION: Final = "duration"
 CONF_INTERVAL: Final = "interval"
 CONF_PRECISION: Final = "precision"
-CONF_PERIOD_KEYS: Final = [CONF_START, CONF_END, CONF_DURATION, CONF_INTERVAL]
+CONF_PERIOD_KEYS: Final = [CONF_START, CONF_END, CONF_DURATION]
 CONF_PROCESS_UNDEF_AS: Final = "process_undef_as"
 
 # Defaults
