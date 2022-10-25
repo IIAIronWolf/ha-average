@@ -88,6 +88,7 @@ PLATFORM_SCHEMA = vol.All(
             vol.Optional(CONF_DURATION): cv.positive_time_period,
             vol.Optional(CONF_PRECISION, default=DEFAULT_PRECISION): int,
             vol.Optional(CONF_PROCESS_UNDEF_AS): vol.Any(int, float),
+            vol.Optional(CONF_INTERVAL): cv.positive_time_period,
         }
     ),
     check_period_keys,
@@ -118,6 +119,7 @@ async def async_setup_platform(
                 config.get(CONF_ENTITIES),
                 config.get(CONF_PRECISION),
                 config.get(CONF_PROCESS_UNDEF_AS),
+                config.get(CONF_INTERVAL),
             )
         ]
     )
@@ -139,6 +141,7 @@ class AverageSensor(SensorEntity):
         entity_ids: list,
         precision: int,
         undef,
+        interval,
     ):
         """Initialize the sensor."""
         self._start_template = start
