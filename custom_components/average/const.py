@@ -36,6 +36,7 @@ CONF_DURATION: Final = "duration"
 CONF_PRECISION: Final = "precision"
 CONF_PERIOD_KEYS: Final = [CONF_START, CONF_END, CONF_DURATION]
 CONF_PROCESS_UNDEF_AS: Final = "process_undef_as"
+CONF_INTERVAL: Final = "interval"
 
 # Defaults
 DEFAULT_NAME: Final = "Average"
@@ -50,6 +51,7 @@ ATTR_AVAILABLE_SOURCES: Final = "available_sources"
 ATTR_COUNT: Final = "count"
 ATTR_MIN_VALUE: Final = "min_value"
 ATTR_MAX_VALUE: Final = "max_value"
+ATTR_INTERVAL: Final = "interval"
 #
 ATTR_TO_PROPERTY: Final = [
     ATTR_START,
@@ -60,6 +62,7 @@ ATTR_TO_PROPERTY: Final = [
     ATTR_COUNT,
     ATTR_MAX_VALUE,
     ATTR_MIN_VALUE,
+    ATTR_INTERVAL,
 ]
 
 
